@@ -15,7 +15,10 @@ const Navbar = () => {
             height={30}
             className="object-cover h-auto w-auto"
           /> */}
-          <h3 className="font-black text-lg">SkillSphere</h3>
+          <h3 className="font-black text-lg">
+            <span className="text-xl">🎓</span>
+            
+            SkillSphere</h3>
         </div>
 
         <ul className="flex items-center gap-5 text-sm">
