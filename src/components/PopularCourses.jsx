@@ -7,12 +7,13 @@ const PopularCourses =async () => {
   const popularCourse = photos.slice(0, 3)
 
   return (
-    <div>
-      <h2 className="text-4xl font-bold">🔥 Popular Courses</h2>
+    <div className="bg-white mt-5  max-w-7xl mx-auto rounded-lg my-5">
+      <h2 className="text-4xl font-bold py-4">🔥 Popular Courses</h2>
 
-      <div>
+      <div className="grid grid-cols-3 gap-5 max-w-7xl mx-auto ">
         {
           popularCourse.map(photo => 
+            
             <CourseCard
             key={photo.id}
             photo={photo}

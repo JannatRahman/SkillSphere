@@ -1,11 +1,39 @@
-import { Card } from '@heroui/react';
+import { Button, Card } from '@heroui/react';
+import Image from 'next/image';
 import React from 'react';
+import { FaStar } from 'react-icons/fa';
 
 const CourseCard = ({photo}) => {
   return (
-    <Card>
-      
-    </Card>
+  <Card className="shadow h-full flex flex-col">
+  
+  <div className="relative w-full h-[200px]">
+    <Image
+      src={photo.image}
+      alt={photo.title}
+      fill
+      className="object-cover rounded-lg"
+    />
+  </div>
+
+  <div className="p-3 flex flex-col flex-1 justify-between space-y-2">
+    <div>
+      <h2 className="text-lg font-bold">{photo.title}</h2>
+      <p className="font-semibold">{photo.instructor}</p>
+      <p className="flex items-center gap-2 font-semibold">
+        <FaStar className="text-yellow-500" />
+        {photo.rating}
+      </p>
+    </div>
+
+    <Button variant="outline" className="w-full mt-3">
+      Details
+    </Button>
+  </div>
+
+</Card>
+   
+   
   );
 };
 
