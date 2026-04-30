@@ -5,7 +5,7 @@ import PopularCourses from "@/components/PopularCourses";
 
 export default function Home() {
   return (
-    <div className="bg-pink-200">
+    <div className="bg-pink-100">
      <Banner/>
      <PopularCourses/>
      

@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import NavLink from "./NavLink";
 
 const Navbar = () => {
   return (
@@ -17,20 +18,23 @@ const Navbar = () => {
           /> */}
           <h3 className="font-black text-lg">
             <span className="text-xl">🎓</span>
-            
+
             SkillSphere</h3>
         </div>
 
         <ul className="flex items-center gap-5 text-sm">
           <li>
-            <Link href={"/"}>Home</Link>
+            <NavLink href={"/"}>Home</NavLink>
           </li>
           <li>
-            <Link href={"/all-photos"}>Courses</Link>
+            <NavLink href={"/all-courses"}>All Courses</NavLink>
+          </li>
+          <li>
+            <NavLink href={"/new-courses"}>New Courses</NavLink>
           </li>
           
           <li>
-            <Link href={"/profile"}>My Profile</Link>
+            <NavLink href={"/my-profile"}>My Profile</NavLink>
           </li>
         </ul>
 
