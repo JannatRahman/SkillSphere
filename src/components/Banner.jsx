@@ -8,8 +8,8 @@ const Banner = () => {
   return (
    
     <div className=' max-w-7xl mx-auto flex'>
-      <div className='bg-white rounded-lg mt-5 flex'>
-        <div className='p-12'>
+      <div className='bg-white rounded-lg mt-5 flex animate__animated animate__pulse '>
+        <div className='p-14'>
           <h2 className='text-4xl font-bold p-2'>🎓 SkillSphere – Online Learning Platform
         </h2>
         <p className='p-4 text-gray-700'>🎥 A modern online learning platform where users can explore courses, <br /> watch lessons, and enroll in skill-based programs like Web Development, <br /> Design, Marketing, and more.</p>
@@ -26,6 +26,7 @@ const Banner = () => {
         alt='woman'
         width={500}
         height={500}
+        className='animate__animated animate__slideInRight pr-5'
         >
 
         </Image>
