@@ -6,7 +6,7 @@ import CourseCard from "@/components/CourseCard";
 const AllCoursesClient = ({ photos }) => {
   const [search, setSearch] = useState("");
 
-  const filteredCourses = photos.filter((course) =>
+  const filteredCourses = (photos || [] ).filter((course) =>
     course.title.toLowerCase().includes(search.toLowerCase())
   );
 
