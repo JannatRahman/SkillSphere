@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner";
 import CourseCard from "@/components/CourseCard";
+import InstructorSection from "@/components/InstructorSection";
 import PopularCourses from "@/components/PopularCourses";
 import TipSection from "@/components/TipSection";
 
@@ -10,6 +11,7 @@ export default function Home() {
      <Banner/>
      <PopularCourses/>
      <TipSection/>
+     <InstructorSection/>
      
 
     </div>
