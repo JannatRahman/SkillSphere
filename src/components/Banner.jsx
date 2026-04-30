@@ -1,25 +1,38 @@
 import { Button } from '@heroui/react';
+import Image from 'next/image';
 import React from 'react';
+import womenImg from '../assets/woman .png'
+
 
 const Banner = () => {
   return (
    
-    <div className=' max-w-7xl mx-auto'>
-      <div className='bg-white rounded-lg mt-5'>
-        <h2 className='text-3xl font-bold p-2'>🎓 SkillSphere – Online Learning Platform
+    <div className=' max-w-7xl mx-auto flex'>
+      <div className='bg-white rounded-lg mt-5 flex'>
+        <div className='p-12'>
+          <h2 className='text-4xl font-bold p-2'>🎓 SkillSphere – Online Learning Platform
         </h2>
         <p className='p-4 text-gray-700'>🎥 A modern online learning platform where users can explore courses, <br /> watch lessons, and enroll in skill-based programs like Web Development, <br /> Design, Marketing, and more.</p>
 
-        <div>
-          <Button variant="danger">Danger</Button>
-          <Button variant="danger">Danger</Button>
+        <div className=' flex gap-3 p-4'>
+          <Button variant="danger">Get Started</Button>
+          <Button variant="outline">View Courses</Button>
+        </div>
         </div>
 
-      </div>
-
       <div>
+        <Image 
+        src={womenImg}
+        alt='woman'
+        width={500}
+        height={500}
+        >
 
+        </Image>
       </div>
+      </div>
+
+
     
 
     </div>
