@@ -4,6 +4,11 @@ import Link from "next/link";
 import React from "react";
 import { FaStar } from "react-icons/fa";
 
+export const metadata = {
+  title: "SkillSphere | Details",
+  
+};
+
 const CourseDetailsPage = async ({ params }) => {
   const { id } = await params;
 

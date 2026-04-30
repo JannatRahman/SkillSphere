@@ -1,5 +1,10 @@
 import AllCoursesClient from "./searchInput/page";
 
+export const metadata = {
+  title: "All Course",
+  
+};
+
 
 const AllCoursesPage = async () => {
   const res = await fetch(

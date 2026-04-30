@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Sarah Johnson",
+    "description": "Expert Web Development instructor with 8+ years of experience in teaching HTML, CSS, JavaScript, React, and Next.js.",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+    "category": "Web Development"
+  },
+  {
+    "id": 2,
+    "title": "David Smith",
+    "description": "Professional UI/UX Design mentor specializing in Figma, Adobe XD, user research, and modern design systems.",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+    "category": "UI/UX Design"
+  },
+  {
+    "id": 3,
+    "title": "Emily Brown",
+    "description": "Digital Marketing specialist focused on SEO, Social Media Marketing, Content Strategy, and Brand Growth.",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
+    "category": "Digital Marketing"
+  },
+  {
+    "id": 4,
+    "title": "Michael Lee",
+    "description": "Data Science instructor with expertise in Python, Machine Learning, Data Analysis, and AI fundamentals.",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
+    "category": "Data Science"
+  }
+]
