@@ -8,14 +8,7 @@ const Navbar = () => {
     <div className="border-b px-2">
       <nav className=" flex justify-between items-center  py-3 max-w-7xl mx-auto w-full">
         <div className="flex gap-2 items-center">
-          {/* <Image
-            src={"/logo.png"}
-            alt="logo"
-            loading="eager"
-            width={30}
-            height={30}
-            className="object-cover h-auto w-auto"
-          /> */}
+    
           <h3 className="font-black text-lg">
             <span className="text-xl">🎓</span>
 
@@ -23,17 +16,15 @@ const Navbar = () => {
         </div>
 
         <ul className="flex items-center gap-5 text-sm">
-          <li>
+          <li className="font-semibold">
             <NavLink href={"/"}>Home</NavLink>
           </li>
-          <li>
+          <li className="font-semibold">
             <NavLink href={"/all-courses"}>All Courses</NavLink>
           </li>
-          <li>
-            <NavLink href={"/new-courses"}>New Courses</NavLink>
-          </li>
           
-          <li>
+          
+          <li className="font-semibold">
             <NavLink href={"/my-profile"}>My Profile</NavLink>
           </li>
         </ul>

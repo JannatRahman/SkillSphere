@@ -2,8 +2,11 @@ import CourseCard from "./CourseCard";
 
 const PopularCourses = async () => {
   const res = await fetch("https://skill-sphere-kappa.vercel.app/data.json");
-  const photos = await res.json();
-  const popularCourse = photos.slice(0, 3);
+const photos = await res.json();
+
+const popularCourse = [...photos]
+  .sort((a, b) => b.rating - a.rating)
+  .slice(0, 3);
 
   return (
     <div className="bg-pink-100 my-10 py-10 rounded-lg">

@@ -1,0 +1,69 @@
+[
+
+  {
+    "id": 1,
+    "title": "Advanced React & Next.js",
+    "instructor": "Sarah Williams",
+    "duration": "18 hours",
+    "rating": 4.9,
+    "level": "Advanced",
+    "description": "Master React and Next.js with real-world projects.",
+    "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "UI/UX Design Masterclass",
+    "instructor": "Michael Brown",
+    "duration": "15 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Design modern and user-friendly interfaces.",
+    "image": "https://images.unsplash.com/photo-1559028012-481c04fa702d",
+    "category": "Design"
+  },
+  {
+    "id": 3,
+    "title": "Digital Marketing Strategy",
+    "instructor": "Emily Johnson",
+    "duration": "12 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Learn SEO, ads, and social media marketing.",
+    "image": "https://images.unsplash.com/photo-1557838923-2985c318be48",
+    "category": "Marketing"
+  },
+  {
+    "id": 4,
+    "title": "Python for Data Science",
+    "instructor": "David Smith",
+    "duration": "22 hours",
+    "rating": 4.9,
+    "level": "Advanced",
+    "description": "Analyze data and build ML models using Python.",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
+    "category": "Data Science"
+  },
+  {
+    "id": 5,
+    "title": "Mobile App Development with React Native",
+    "instructor": "Olivia Martinez",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Intermediate",
+    "description": "Build Android & iOS apps using React Native.",
+    "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3",
+    "category": "Development"
+  },
+  {
+    "id": 6,
+    "title": "Photography Essentials",
+    "instructor": "James Wilson",
+    "duration": "10 hours",
+    "rating": 4.5,
+    "level": "Beginner",
+    "description": "Learn camera settings and professional photography basics.",
+    "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    "category": "Photography"
+  }
+]
