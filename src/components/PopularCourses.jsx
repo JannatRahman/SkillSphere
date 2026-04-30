@@ -10,11 +10,11 @@ const PopularCourses = async () => {
       
       <div className="max-w-7xl mx-auto px-4">
         
-        <h2 className="text-4xl font-bold py-6">
+        <h2 className="text-4xl font-bold py-6 animate__animated animate__slideInLeft">
           🔥 Popular Courses
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate__animated animate__zoomIn">
           {popularCourse.map((photo) => (
             <CourseCard key={photo.id} photo={photo} />
           ))}

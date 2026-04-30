@@ -1,5 +1,6 @@
 import { Button, Card } from '@heroui/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
 
@@ -26,9 +27,11 @@ const CourseCard = ({photo}) => {
       </p>
     </div>
 
+    <Link href={`/all-courses/${photo.id}`}>
     <Button variant="outline" className="w-full mt-3">
       Details
     </Button>
+    </Link>
   </div>
 
 </Card>
