@@ -9,7 +9,7 @@ const popularCourse = [...photos]
   .slice(0, 3);
 
   return (
-    <div className="bg-pink-100 my-10 py-10 rounded-lg">
+    <div className="bg-pink-100 my-5 py-10 rounded-lg">
       
       <div className="max-w-7xl mx-auto px-4">
         

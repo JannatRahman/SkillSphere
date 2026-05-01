@@ -1,5 +1,5 @@
 
-
+import Image from "next/image";
 import React from "react";
 import { FaStar } from "react-icons/fa";
 
@@ -8,6 +8,7 @@ const NewCourse = async () => {
     "https://skill-sphere-kappa.vercel.app/course.json"
   );
   const photos = await res.json();
+
 
   return (
     <div className="bg-pink-100 pb-10">
@@ -20,15 +21,23 @@ const NewCourse = async () => {
           </h2>
 
           {/* Responsive Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
             {photos.map((photo) => (
               <div
                 key={photo.id}
                 className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300"
               >
-                
-                
+                {/* Image Wrapper */}
+                <div className="relative w-full h-64">
+                  <Image
+                    src={photo.image}
+                    alt={photo.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
                 {/* Content */}
                 <div className="p-4 space-y-3 text-left">
                   <h2 className="text-lg font-bold">
@@ -57,6 +66,7 @@ const NewCourse = async () => {
 
       </div>
     </div>
+
   );
 };
 
