@@ -1,69 +1,79 @@
 [
-
   {
     "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Learn full-stack web development from scratch.",
+    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
+    "category": "Development"
+  },
+  {
+    "id": 2,
     "title": "Advanced React & Next.js",
     "instructor": "Sarah Williams",
     "duration": "18 hours",
     "rating": 4.9,
     "level": "Advanced",
     "description": "Master React and Next.js with real-world projects.",
-    "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
     "category": "Development"
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "UI/UX Design Masterclass",
     "instructor": "Michael Brown",
     "duration": "15 hours",
     "rating": 4.7,
     "level": "Intermediate",
     "description": "Design modern and user-friendly interfaces.",
-    "image": "https://images.unsplash.com/photo-1559028012-481c04fa702d",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
     "category": "Design"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Digital Marketing Strategy",
     "instructor": "Emily Johnson",
     "duration": "12 hours",
     "rating": 4.6,
     "level": "Beginner",
     "description": "Learn SEO, ads, and social media marketing.",
-    "image": "https://images.unsplash.com/photo-1557838923-2985c318be48",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
     "category": "Marketing"
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Python for Data Science",
     "instructor": "David Smith",
     "duration": "22 hours",
     "rating": 4.9,
     "level": "Advanced",
     "description": "Analyze data and build ML models using Python.",
-    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
+    "image": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=800&q=80",
     "category": "Data Science"
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Mobile App Development with React Native",
     "instructor": "Olivia Martinez",
     "duration": "20 hours",
     "rating": 4.8,
     "level": "Intermediate",
     "description": "Build Android & iOS apps using React Native.",
-    "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3",
+    "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&q=80",
     "category": "Development"
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Photography Essentials",
     "instructor": "James Wilson",
     "duration": "10 hours",
     "rating": 4.5,
     "level": "Beginner",
     "description": "Learn camera settings and professional photography basics.",
-    "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    "image": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80",
     "category": "Photography"
   }
 ]
