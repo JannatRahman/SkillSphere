@@ -1,4 +1,5 @@
 "use client";
+
 import { authClient } from "@/lib/auth-client";
 import { Check, EyeClosed } from "@gravity-ui/icons";
 import {
@@ -17,7 +18,6 @@ import { FaEye } from "react-icons/fa";
 
 export default function RegisterPage() {
   const router = useRouter();
-
   const [isShowPassword, setIsShowPassword] = useState(false);
 
   const onSubmit = async (e) => {
@@ -28,97 +28,120 @@ export default function RegisterPage() {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    const {data, error} = await authClient.signUp.email({
-      name, 
-      image, 
+    const { error } = await authClient.signUp.email({
+      name,
+      image,
       email,
       password,
-    })
-    
-    if(!error){
-      router.push('/')
+    });
+
+    if (!error) {
+      router.push("/");
     }
   };
 
   return (
-    <Card className="border mx-auto w-125 py-10 mt-5">
-      <h1 className="text-center text-2xl font-bold">Register Your Account</h1>
+    <div className="min-h-screen bg-pink-100 flex items-center justify-center px-4 py-10">
 
-      <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
-        <TextField isRequired name="name" type="text">
-          <Label>Name</Label>
-          <Input placeholder="Enter your name" />
-          <FieldError />
-        </TextField>
+      <Card className="w-full max-w-md sm:max-w-lg md:max-w-xl border shadow-xl rounded-2xl p-6 sm:p-8">
 
-        <TextField isRequired name="image" type="text">
-          <Label>Image URL</Label>
-          <Input placeholder="Image URL" />
-          <FieldError />
-        </TextField>
+        {/* Title */}
+        <h1 className="text-center text-2xl sm:text-3xl font-bold mb-6">
+          Register Your Account
+        </h1>
 
-        <TextField
-          isRequired
-          name="email"
-          type="email"
-          validate={(value) => {
-            if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
-              return "Please enter a valid email address";
-            }
+        <Form className="flex flex-col gap-5 w-full" onSubmit={onSubmit}>
 
-            return null;
-          }}
-        >
-          <Label>Email</Label>
-          <Input placeholder="john@example.com" />
-          <FieldError />
-        </TextField>
+          {/* Name */}
+          <TextField isRequired name="name" type="text">
+            <Label>Name</Label>
+            <Input placeholder="Enter your name" className="w-full" />
+            <FieldError />
+          </TextField>
 
-        <TextField
-          isRequired
-          className="relative"
-          minLength={8}
-          name="password"
-           type={isShowPassword ? "text" : "password"}
-          validate={(value) => {
-            if (value.length < 8) {
-              return "Password must be at least 8 characters";
-            }
-            if (!/[A-Z]/.test(value)) {
-              return "Password must contain at least one uppercase letter";
-            }
-            if (!/[0-9]/.test(value)) {
-              return "Password must contain at least one number";
-            }
+          {/* Image */}
+          <TextField isRequired name="image" type="text">
+            <Label>Image URL</Label>
+            <Input placeholder="Paste image URL" className="w-full" />
+            <FieldError />
+          </TextField>
 
-            return null;
-          }}
-        >
-          <Label>Password</Label>
-          <Input placeholder="Enter your password" />
-          
-           <span className="absolute right-4 top-8 cursor-pointer" onClick={() => setIsShowPassword(!isShowPassword)}>
-            {isShowPassword? <FaEye /> : <EyeClosed/>}
-            </span>
+          {/* Email */}
+          <TextField
+            isRequired
+            name="email"
+            type="email"
+            validate={(value) => {
+              if (
+                !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)
+              ) {
+                return "Please enter a valid email address";
+              }
+              return null;
+            }}
+          >
+            <Label>Email</Label>
+            <Input placeholder="john@example.com" className="w-full" />
+            <FieldError />
+          </TextField>
 
-          <Description>
-            Must be at least 8 characters with 1 uppercase and 1 number
-          </Description>
-          <FieldError />
-        </TextField>
+          {/* Password */}
+          <TextField
+            isRequired
+            name="password"
+            type={isShowPassword ? "text" : "password"}
+            validate={(value) => {
+              if (value.length < 8) {
+                return "Password must be at least 8 characters";
+              }
+              if (!/[A-Z]/.test(value)) {
+                return "Must include 1 uppercase letter";
+              }
+              if (!/[0-9]/.test(value)) {
+                return "Must include 1 number";
+              }
+              return null;
+            }}
+          >
+            <Label>Password</Label>
 
-        <div className="flex gap-2">
-          <Button type="submit">
-            <Check />
-            Submit
-          </Button>
-          <Button type="reset" variant="secondary">
-            Reset
-          </Button>
-        </div>
-      </Form>
+            <div className="relative">
+              <Input
+                placeholder="Enter your password"
+                className="w-full pr-10"
+              />
 
-      
-    </Card>
+              <span
+                className="absolute right-3 top-3 cursor-pointer text-gray-600"
+                onClick={() => setIsShowPassword(!isShowPassword)}
+              >
+                {isShowPassword ? <FaEye /> : <EyeClosed />}
+              </span>
+            </div>
+
+            <Description className="text-sm mt-1">
+              Must be 8+ chars with 1 uppercase & 1 number
+            </Description>
+
+            <FieldError />
+          </TextField>
+
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row gap-3 pt-2">
+
+            <Button type="submit" className="w-full sm:w-auto">
+              <Check />
+              Submit
+            </Button>
+
+            <Button type="reset" variant="secondary" className="w-full sm:w-auto">
+              Reset
+            </Button>
+
+          </div>
+        </Form>
+
+      </Card>
+    </div>
   );
 }
