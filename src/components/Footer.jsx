@@ -1,177 +1,115 @@
 import Link from "next/link";
-import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="relative ">
-      <div className="mt-7 h-px w-full bg-linear-to-r from-transparent via-gray-300 to-transparent dark:via-white/10" />
+    <footer className="relative overflow-hidden bg-gradient-to-br from-pink-100 via-rose-50 to-pink-200">
 
-      {/* Background Layer */}
-      <div className="absolute inset-0 -z-10 bg-white " />
+      {/* Background Glow */}
+      <div className="absolute top-10 left-10 w-72 h-72 bg-pink-300 blur-3xl rounded-full opacity-30"></div>
+      <div className="absolute bottom-10 right-10 w-80 h-80 bg-rose-300 blur-3xl rounded-full opacity-30"></div>
 
-      {/* Subtle Gradient Glow */}
-      <div
-        className="absolute inset-0 -z-10 bg-linear-to-tr 
-        from-purple-500/5 via-transparent to-blue-500/5 
-        dark:from-purple-500/10 dark:to-blue-500/10 blur-3xl"
-      />
+      {/* Main Container */}
+      <div className="relative max-w-7xl mx-auto px-6 py-16">
 
-      {/* Content */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
         {/* Top Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              {/* <Image
-                src="/logo.png"
-                alt="pixgen logo"
-                width={32}
-                height={32}
-                className="dark:brightness-200"
-              /> */}
-              <h2 className="text-xl font-semibold tracking-tight text-black dark:text-white">
-                SkillSphere
-              </h2>
-            </div>
+            <h2 className="text-2xl font-extrabold text-gray-800">
+              🎓 SkillSphere
+            </h2>
 
-            <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400 max-w-xs">
-              A modern online learning platform where users can explore courses, watch lessons, and enroll in skill-based programs like Web Development, Design, Marketing, and more.
+            <p className="text-sm text-gray-600 leading-relaxed">
+              A modern online learning platform where users can explore
+              courses, watch lessons, and enroll in skill-based programs like
+              Web Development, Design, Marketing, and more.
             </p>
           </div>
 
-          {/* Product */}
+          {/* Contact */}
           <div>
-            <h3 className="text-sm font-semibold text-black dark:text-white mb-4">
-             Contact info
+            <h3 className="text-sm font-bold text-gray-800 mb-4">
+              📞 Contact Info
             </h3>
-            <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+            <ul className="space-y-3 text-sm text-gray-600">
+              <li>Email: support@skillsphere.com</li>
+              <li>Phone: +880 123 456 789</li>
+              <li>Location: Dhaka, Bangladesh</li>
+            </ul>
+          </div>
+
+          {/* Social */}
+          <div>
+            <h3 className="text-sm font-bold text-gray-800 mb-4">
+              🌐 Social Links
+            </h3>
+            <ul className="space-y-3 text-sm text-gray-600">
               <li>
-                <Link
-                  href="/generate"
-                  className="hover:text-black dark:hover:text-white transition"
-                >
-                  Generate
+                <Link href="#" className="hover:text-pink-500 transition">
+                  Facebook
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/all-photos"
-                  className="hover:text-black dark:hover:text-white transition"
-                >
-                  Gallery
+                <Link href="#" className="hover:text-pink-500 transition">
+                  Instagram
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/pricing"
-                  className="hover:text-black dark:hover:text-white transition"
-                >
-                  Pricing
+                <Link href="#" className="hover:text-pink-500 transition">
+                  LinkedIn
                 </Link>
               </li>
             </ul>
           </div>
 
+          {/* Terms */}
           <div>
-            <h3 className="text-sm font-semibold text-black dark:text-white mb-4">
-             Social links
+            <h3 className="text-sm font-bold text-gray-800 mb-4">
+              📄 Legal
             </h3>
-            <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+            <ul className="space-y-3 text-sm text-gray-600">
               <li>
-                <Link
-                  href="/generate"
-                  className="hover:text-black dark:hover:text-white transition"
-                >
-                  Generate
-                </Link>
+                
+                  About Us
+              
               </li>
               <li>
-                <Link
-                  href="/all-photos"
-                  className="hover:text-black dark:hover:text-white transition"
-                >
-                  Gallery
-                </Link>
+               
+                  Terms & Conditions
+                
               </li>
               <li>
-                <Link
-                  href="/pricing"
-                  className="hover:text-black dark:hover:text-white transition"
-                >
-                  Pricing
-                </Link>
+                
+                  Privacy Policy
+               
               </li>
             </ul>
           </div>
 
-          
-          <div>
-            <h3 className="text-sm font-semibold text-black dark:text-white mb-4">
-             Terms & Conditions
-            </h3>
-            <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
-              <li>
-                <Link
-                  href="/about"
-                  className="hover:text-black dark:hover:text-white transition"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="hover:text-black dark:hover:text-white transition"
-                >
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/terms"
-                  className="hover:text-black dark:hover:text-white transition"
-                >
-                  Terms
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* CTA Block */}
-          <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-black dark:text-white">
-              Privacy policy
-            </h3>
-
-           
-
-            
-          </div>
         </div>
 
         {/* Divider */}
-        <div className="mt-12 h-px w-full bg-linear-to-r from-transparent via-gray-300 to-transparent dark:via-white/10" />
+        <div className="mt-12 h-px bg-white/50"></div>
 
         {/* Bottom */}
-        <div className="mt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
-          <p>© {new Date().getFullYear()} SkillSphere. All rights reserved.</p>
+        <div className="mt-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 gap-3">
 
-          <div className="flex items-center gap-6">
-            <Link
-              href="/privacy"
-              className="hover:text-black dark:hover:text-white transition"
-            >
+          <p>
+            © {new Date().getFullYear()} SkillSphere. All rights reserved.
+          </p>
+
+          <div className="flex gap-6">
+            <Link href="/privacy" className="hover:text-pink-500 transition">
               Privacy
             </Link>
-            <Link
-              href="/terms"
-              className="hover:text-black dark:hover:text-white transition"
-            >
+            <Link href="/terms" className="hover:text-pink-500 transition">
               Terms
             </Link>
           </div>
+
         </div>
+
       </div>
     </footer>
   );

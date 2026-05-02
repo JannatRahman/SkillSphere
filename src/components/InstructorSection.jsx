@@ -9,24 +9,36 @@ const InstructorSection = async () => {
   const photos = await res.json();
 
   return (
-    <div className="bg-pink-100 pb-10">
+    <div className="bg-pink-100 py-12">
       <div className="max-w-7xl mx-auto px-4">
+        
+        <div className="bg-white rounded-3xl shadow-lg py-10 px-6 sm:px-8 md:px-10">
+          
+          {/* Section Heading */}
+          <div className="text-center mb-10">
+            <p className="inline-block px-4 py-2 rounded-full bg-pink-100 text-pink-600 font-semibold text-sm mb-4">
+              🌟 Meet Our Experts
+            </p>
 
-        <div className="shadow rounded-2xl bg-white py-8 px-4 sm:px-6 md:px-10 text-center space-y-8">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
+              🏆 Top Instructors
+            </h2>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-            🏆 Top Instructors Section
-          </h2>
+            <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-sm sm:text-base">
+              Learn from highly skilled instructors who are passionate about
+              teaching and helping students grow their future.
+            </p>
+          </div>
 
-          {/* Responsive Grid */}
+          {/* Instructor Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
+            
             {photos.map((photo) => (
               <div
                 key={photo.id}
-                className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300"
+                className="bg-pink-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 hover:-translate-y-1"
               >
-                {/* Image Wrapper */}
+                {/* Image */}
                 <div className="relative w-full h-64">
                   <Image
                     src={photo.image}
@@ -37,20 +49,20 @@ const InstructorSection = async () => {
                 </div>
 
                 {/* Content */}
-                <div className="p-4 space-y-3 text-left">
-                  <h2 className="text-lg font-bold">
+                <div className="p-5 text-left space-y-3">
+                  <h3 className="text-lg font-bold text-gray-800">
                     {photo.title}
-                  </h2>
+                  </h3>
 
-                  <p className="text-gray-800 font-medium">
+                  <p className="text-pink-500 font-medium">
                     {photo.category}
                   </p>
 
-                  <p className="text-gray-600 font-medium">
+                  <p className="text-gray-600 text-sm leading-relaxed">
                     {photo.description}
                   </p>
 
-                  <p className="flex items-center gap-2 font-semibold">
+                  <p className="flex items-center gap-2 font-semibold text-gray-700">
                     <FaStar className="text-yellow-500" />
                     {photo.rating}
                   </p>
@@ -59,9 +71,7 @@ const InstructorSection = async () => {
             ))}
 
           </div>
-
         </div>
-
       </div>
     </div>
   );

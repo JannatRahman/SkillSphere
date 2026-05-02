@@ -5,7 +5,7 @@ import React from "react";
 import { FaStar } from "react-icons/fa";
 
 export const metadata = {
-  title: "SkillSphere | Details",
+  title: "SkillSphere |",
   
 };
 

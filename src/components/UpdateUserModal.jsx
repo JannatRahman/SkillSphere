@@ -14,7 +14,7 @@ export function UpdateUserModal() {
 
     await authClient.updateUser({
       name,
-      image,
+      image
     })
   }
 
