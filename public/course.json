@@ -1,69 +1,26 @@
 [
-  
   {
     "id": 2,
-    "title": "Advanced React & Next.js",
-    "instructor": "Sarah Williams",
-    "duration": "18 hours",
-    "rating": 4.9,
-    "level": "Advanced",
-    "description": "Master React and Next.js with real-world projects.",
-    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
-    "category": "Development"
+    "title": "UI/UX Design Masterclass",
+    "description": "Master Figma, Adobe XD, wireframing, prototyping, and user-centered design for modern web and mobile apps.",
+    "rating": 4.8,
+    "image": "https://randomuser.me/api/portraits/women/65.jpg",
+    "category": "UI/UX Design"
   },
   {
     "id": 3,
-    "title": "UI/UX Design Masterclass",
-    "instructor": "Michael Brown",
-    "duration": "15 hours",
+    "title": "Digital Marketing Pro Course",
+    "description": "Learn SEO, Facebook Ads, Google Ads, Content Marketing, and Social Media Strategy to grow any business online.",
     "rating": 4.7,
-    "level": "Intermediate",
-    "description": "Design modern and user-friendly interfaces.",
-    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
-    "category": "Design"
+    "image": "https://randomuser.me/api/portraits/men/52.jpg",
+    "category": "Digital Marketing"
   },
   {
     "id": 4,
-    "title": "Digital Marketing Strategy",
-    "instructor": "Emily Johnson",
-    "duration": "12 hours",
-    "rating": 4.6,
-    "level": "Beginner",
-    "description": "Learn SEO, ads, and social media marketing.",
-    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
-    "category": "Marketing"
-  },
-  {
-    "id": 5,
     "title": "Python for Data Science",
-    "instructor": "David Smith",
-    "duration": "22 hours",
+    "description": "Understand Python, Pandas, NumPy, Machine Learning basics, and data visualization for modern data science careers.",
     "rating": 4.9,
-    "level": "Advanced",
-    "description": "Analyze data and build ML models using Python.",
-    "image": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=800&q=80",
+    "image": "https://randomuser.me/api/portraits/women/72.jpg",
     "category": "Data Science"
-  },
-  {
-    "id": 6,
-    "title": "Mobile App Development with React Native",
-    "instructor": "Olivia Martinez",
-    "duration": "20 hours",
-    "rating": 4.8,
-    "level": "Intermediate",
-    "description": "Build Android & iOS apps using React Native.",
-    "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&q=80",
-    "category": "Development"
-  },
-  {
-    "id": 7,
-    "title": "Photography Essentials",
-    "instructor": "James Wilson",
-    "duration": "10 hours",
-    "rating": 4.5,
-    "level": "Beginner",
-    "description": "Learn camera settings and professional photography basics.",
-    "image": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80",
-    "category": "Photography"
   }
 ]

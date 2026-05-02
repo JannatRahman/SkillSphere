@@ -1,7 +1,7 @@
 import Banner from "@/components/Banner";
 import CourseCard from "@/components/CourseCard";
 import InstructorSection from "@/components/InstructorSection";
-import NewCourse from "@/components/NewCourse";
+import NewCourse from "@/components/WhyChooseUs";
 import PopularCourses from "@/components/PopularCourses";
 import TipSection from "@/components/TipSection";
 

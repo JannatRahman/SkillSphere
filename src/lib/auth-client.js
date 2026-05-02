@@ -4,4 +4,4 @@ export const authClient = createAuthClient({
     baseURL: "https://skill-sphere-kappa.vercel.app"
 });
 
-export const { signIn, signUp, useSession} = createAuthClient()
+export const { signIn, signUp, useSession, getSession} = createAuthClient()
