@@ -4,6 +4,8 @@ import InstructorSection from "@/components/InstructorSection";
 import NewCourse from "@/components/WhyChooseUs";
 import PopularCourses from "@/components/PopularCourses";
 import TipSection from "@/components/TipSection";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import TrendingCourse from "@/components/TrendingCourse";
 
 
 export default function Home() {
@@ -13,7 +15,8 @@ export default function Home() {
      <PopularCourses/>
      <TipSection/>
      <InstructorSection/>
-     <NewCourse/>
+     <TrendingCourse/>
+     <WhyChooseUs/>
      
 
     </div>

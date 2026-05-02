@@ -19,6 +19,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { GrGoogle } from "react-icons/gr";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function SignInPage() {
   const [isShowPassword, setIsShowPassword] = useState(false);
@@ -29,17 +31,31 @@ export default function SignInPage() {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    await authClient.signIn.email({
-      email,
-      password,
-      callbackURL: "/",
-    });
+    try {
+      const result = await authClient.signIn.email({
+        email,
+        password,
+        callbackURL: "/",
+      });
+
+      if (result) {
+        toast.success("Login successful 🎉");
+      }
+    } catch (error) {
+      toast.error("Login failed. Please try again.");
+    }
   };
 
   const handleGoogleSignin = async () => {
-    await authClient.signIn.social({
-      provider: "google",
-    });
+    try {
+      await authClient.signIn.social({
+        provider: "google",
+      });
+
+      toast.success("Google sign in successful 🎉");
+    } catch (error) {
+      toast.error("Google sign in failed.");
+    }
   };
 
   return (
@@ -93,7 +109,6 @@ export default function SignInPage() {
           >
             <Label>Password</Label>
 
-            {/* password wrapper */}
             <div className="relative">
               <Input
                 placeholder="Enter your password"
@@ -124,7 +139,11 @@ export default function SignInPage() {
               <Check /> Submit
             </Button>
 
-            <Button type="reset" variant="secondary" className="w-full sm:w-auto">
+            <Button
+              type="reset"
+              variant="secondary"
+              className="w-full sm:w-auto"
+            >
               Reset
             </Button>
           </div>
