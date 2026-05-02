@@ -4,9 +4,9 @@ import React from 'react';
 const LoadingPage = () => {
   return (
     <div>
-       <div className="flex flex-col items-center gap-2">
+       <div className="flex flex-col items-center gap-2 m-15">
         <Spinner size="xl" />
-        <span className="text-xs text-muted">Extra Large</span>
+        <span className="text-xs text-muted"></span>
       </div>
     </div>
   );
