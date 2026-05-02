@@ -32,14 +32,21 @@ export default function SignInPage() {
     const password = e.target.password.value;
 
     try {
+      // removed callbackURL because it redirects too fast
       const result = await authClient.signIn.email({
         email,
         password,
-        callbackURL: "/",
       });
 
-      if (result) {
+      if (result?.data || result) {
         toast.success("Login successful 🎉");
+
+        // delay redirect so toast can be seen
+        setTimeout(() => {
+          window.location.href = "/";
+        }, 1500);
+      } else {
+        toast.error("Login failed");
       }
     } catch (error) {
       toast.error("Login failed. Please try again.");
@@ -48,11 +55,13 @@ export default function SignInPage() {
 
   const handleGoogleSignin = async () => {
     try {
-      await authClient.signIn.social({
-        provider: "google",
-      });
+      toast.success("Redirecting to Google...");
 
-      toast.success("Google sign in successful 🎉");
+      setTimeout(async () => {
+        await authClient.signIn.social({
+          provider: "google",
+        });
+      }, 1000);
     } catch (error) {
       toast.error("Google sign in failed.");
     }
@@ -60,7 +69,6 @@ export default function SignInPage() {
 
   return (
     <div className="min-h-screen bg-pink-100 flex items-center justify-center px-4 py-10">
-
       <Card className="w-full max-w-md sm:max-w-lg md:max-w-xl border shadow-xl rounded-2xl p-6 sm:p-8">
 
         {/* Title */}
@@ -68,8 +76,10 @@ export default function SignInPage() {
           Login
         </h1>
 
-        <Form className="flex flex-col gap-5 w-full" onSubmit={onSubmit}>
-
+        <Form
+          className="flex flex-col gap-5 w-full"
+          onSubmit={onSubmit}
+        >
           {/* Email */}
           <TextField
             isRequired
@@ -85,7 +95,10 @@ export default function SignInPage() {
             }}
           >
             <Label>Email</Label>
-            <Input placeholder="john@example.com" className="w-full" />
+            <Input
+              placeholder="john@example.com"
+              className="w-full"
+            />
             <FieldError />
           </TextField>
 
@@ -116,7 +129,9 @@ export default function SignInPage() {
               />
 
               <span
-                onClick={() => setIsShowPassword(!isShowPassword)}
+                onClick={() =>
+                  setIsShowPassword(!isShowPassword)
+                }
                 className="absolute right-3 top-3 cursor-pointer text-gray-600"
               >
                 {isShowPassword ? <FaEye /> : <EyeClosed />}
@@ -125,7 +140,10 @@ export default function SignInPage() {
 
             <Description className="text-sm mt-2">
               Don’t have an account?{" "}
-              <Link href="/register" className="text-red-500 font-medium">
+              <Link
+                href="/register"
+                className="text-red-500 font-medium"
+              >
                 Register
               </Link>
             </Description>
@@ -135,7 +153,10 @@ export default function SignInPage() {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-3">
-            <Button type="submit" className="w-full sm:w-auto">
+            <Button
+              type="submit"
+              className="w-full sm:w-auto"
+            >
               <Check /> Submit
             </Button>
 
@@ -150,7 +171,9 @@ export default function SignInPage() {
         </Form>
 
         {/* Divider */}
-        <p className="text-center my-5 text-sm text-gray-500">Or</p>
+        <p className="text-center my-5 text-sm text-gray-500">
+          Or
+        </p>
 
         {/* Google */}
         <Button
@@ -161,7 +184,6 @@ export default function SignInPage() {
           <GrGoogle className="text-blue-500" />
           Sign in with Google
         </Button>
-
       </Card>
     </div>
   );
