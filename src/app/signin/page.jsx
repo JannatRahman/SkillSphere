@@ -1,16 +1,21 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
-import { Check } from "@gravity-ui/icons";
+import { Check, EyeClosed, EyeSlash } from "@gravity-ui/icons";
 import {
   Button,
   Card,
   Description,
   FieldError,
+  Fieldset,
   Form,
   Input,
   Label,
   TextField,
 } from "@heroui/react";
+import Link from "next/link";
+import { useState } from "react";
+import { FaEye } from "react-icons/fa";
+import { GrGoogle } from "react-icons/gr";
 
 export default function SignInPage() {
   const onSubmit = async (e) => {
@@ -28,10 +33,18 @@ export default function SignInPage() {
     })
     
   };
+  
+  const [isShowPassword, setIsShowPassword] = useState(false);
+
+  const handleGoogleSignin = async () => {
+    await authClient.signIn.social({
+      provider: 'google'
+    })
+  }
 
   return (
     <Card className="border mx-auto w-125 py-10 mt-5">
-      <h1 className="text-center text-2xl font-bold">Sign In</h1>
+      <h1 className="text-center text-2xl font-bold">Login</h1>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
         
@@ -54,9 +67,10 @@ export default function SignInPage() {
 
         <TextField
           isRequired
+          className="relative"
           minLength={8}
           name="password"
-          type="password"
+          type={isShowPassword ? "text" : "password"}
           validate={(value) => {
             if (value.length < 8) {
               return "Password must be at least 8 characters";
@@ -67,14 +81,19 @@ export default function SignInPage() {
             if (!/[0-9]/.test(value)) {
               return "Password must contain at least one number";
             }
-
             return null;
-          }}
-        >
+          }}>
           <Label>Password</Label>
           <Input placeholder="Enter your password" />
-          <Description>
-            Must be at least 8 characters with 1 uppercase and 1 number
+          <span className="absolute right-4 top-8 cursor-pointer" onClick={() => setIsShowPassword(!isShowPassword)}>
+            {isShowPassword? <FaEye /> : <EyeClosed/>}
+            </span>
+          <Description className="font-semibold text-[15px]">
+            Don't have an account? 
+            <Link href={'/register'}>
+            <span className="text-red-500 cursor-pointer"> Register
+            </span>
+            </Link>
           </Description>
           <FieldError />
         </TextField>
@@ -89,6 +108,8 @@ export default function SignInPage() {
           </Button>
         </div>
       </Form>
+      <p className="text-center">Or</p>
+      <Button onClick={handleGoogleSignin} variant="outline" className={'w-full'}><GrGoogle className="text-blue-500"/> Sign in with Google</Button>
     </Card>
   );
 }

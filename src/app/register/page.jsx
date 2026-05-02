@@ -1,6 +1,6 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
-import { Check } from "@gravity-ui/icons";
+import { Check, EyeClosed } from "@gravity-ui/icons";
 import {
   Button,
   Card,
@@ -12,9 +12,13 @@ import {
   TextField,
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { FaEye } from "react-icons/fa";
 
-export default function SignUpPage() {
+export default function RegisterPage() {
   const router = useRouter();
+
+  const [isShowPassword, setIsShowPassword] = useState(false);
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -38,7 +42,7 @@ export default function SignUpPage() {
 
   return (
     <Card className="border mx-auto w-125 py-10 mt-5">
-      <h1 className="text-center text-2xl font-bold">Sign Up</h1>
+      <h1 className="text-center text-2xl font-bold">Register Your Account</h1>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
         <TextField isRequired name="name" type="text">
@@ -72,9 +76,10 @@ export default function SignUpPage() {
 
         <TextField
           isRequired
+          className="relative"
           minLength={8}
           name="password"
-          type="password"
+           type={isShowPassword ? "text" : "password"}
           validate={(value) => {
             if (value.length < 8) {
               return "Password must be at least 8 characters";
@@ -91,6 +96,11 @@ export default function SignUpPage() {
         >
           <Label>Password</Label>
           <Input placeholder="Enter your password" />
+          
+           <span className="absolute right-4 top-8 cursor-pointer" onClick={() => setIsShowPassword(!isShowPassword)}>
+            {isShowPassword? <FaEye /> : <EyeClosed/>}
+            </span>
+
           <Description>
             Must be at least 8 characters with 1 uppercase and 1 number
           </Description>
@@ -107,6 +117,8 @@ export default function SignUpPage() {
           </Button>
         </div>
       </Form>
+
+      
     </Card>
   );
 }
