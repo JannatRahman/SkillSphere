@@ -32,7 +32,7 @@ export default function SignInPage() {
     const password = e.target.password.value;
 
     try {
-      // removed callbackURL because it redirects too fast
+     
       const result = await authClient.signIn.email({
         email,
         password,
@@ -41,7 +41,7 @@ export default function SignInPage() {
       if (result?.data || result) {
         toast.success("Login successful 🎉");
 
-        // delay redirect so toast can be seen
+       
         setTimeout(() => {
           window.location.href = "/";
         }, 1500);

@@ -1,36 +1,210 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎓 SkillSphere – Online Learning Platform
 
-## Getting Started
+SkillSphere is a modern online learning platform where users can explore trending courses, discover top instructors, and enroll in skill-based programs like Web Development, UI/UX Design, Digital Marketing, and Data Science.
 
-First, run the development server:
+The project is built with **Next.js**, **React**, **Tailwind CSS**, and **HeroUI**, focusing on responsive design, clean UI, and smooth user experience.
+
+---
+
+## 🚀 Features
+
+* Protected access for courses and learning content
+
+* Users must register first to view all courses and products
+
+* Registration with Name, Photo URL, Email, and Password
+
+* Login with Email & Password
+
+* Login with Google Authentication
+
+* User profile section
+
+* Update profile information (name and profile image)
+
+* Course details page with full course information
+
+* Details button for each course to view complete course content
+
+* Responsive homepage for all devices
+
+* Hero banner with CTA buttons
+
+* Trending Courses section
+
+* Top Instructors section
+
+* Beautiful footer design
+
+* Cute custom 404 page
+
+* Authentication pages (Login / Signup)
+
+* Lottie / animated UI elements
+
+* Clean reusable component structure
+
+* JSON-based dynamic course and instructor data
+
+---
+
+## 🛠️ Technologies Used
+
+* Next.js
+* React.js
+* Tailwind CSS
+* HeroUI
+* React Icons
+* Lottie React
+* Animate.css
+* Swiper.js
+* JavaScript (ES6+)
+
+---
+
+## 📂 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+src/
+ ├── app/
+ │   ├── login/
+ │   ├── register/
+ │   ├── not-found.jsx
+ │   └── page.jsx
+ │
+ ├── components/
+ │   ├── Banner.jsx
+ │   ├── InstructorSection.jsx
+ │   ├── TrendingCourses.jsx
+ │   ├── Footer.jsx
+ │   └── LottieFiles.jsx
+ │
+ ├── assets/
+ │   ├── images
+ │   └── animations
+ │
+ └── data/
+     ├── courses.json
+     └── instructors.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## ⚙️ Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Clone the repository
 
-## Learn More
+```bash
+git clone https://github.com/JannatRahman/SkillSphere
+```
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📸 Main Sections
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🏠 Hero Section
 
-## Deploy on Vercel
+Clean landing banner introducing the platform with action buttons.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 📚 Trending Courses
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Shows popular skill-based courses users can enroll in.
+
+### 👩‍🏫 Top Instructors
+
+Displays expert instructors with ratings and categories.
+
+### 🔐 Authentication
+
+Login and Signup pages for user access.
+
+### ❌ Custom 404 Page
+
+Cute pink themed not-found page for better UX.
+
+---
+
+## 🔐 Authentication Flow
+
+### Registration
+
+New users must create an account before accessing all courses and products.
+
+Users can register using:
+
+* Full Name
+* Photo URL
+* Email Address
+* Password
+
+They can also quickly sign in using:
+
+* Google Login
+
+### Login
+
+Existing users can log in using:
+
+* Email + Password
+* Google Authentication
+
+### Protected Content
+
+Users must be logged in to:
+
+* View all available courses
+* Access premium learning content
+* See product/course details pages
+* Manage personal profile information
+
+---
+
+## 👤 Profile Management
+
+After login, users can access their personal profile section where they can:
+
+* View profile information
+* Update name
+* Change profile image
+* Manage account details
+
+---
+
+## 📘 Course Details Page
+
+Each course includes a **Details** button.
+
+When users click on Details, they can:
+
+* View full course description
+
+* See instructor information
+
+* Course details page
+
+* Student dashboard
+
+* Payment integration
+
+* Wishlist functionality
+
+* Course filtering and search
+
+* Dark mode support
+
+* Instructor profile pages
+
+* Review and rating system
+
+---
+
+## 👩‍💻 Author
+
+Developed by **Jannat Amila Rahman**
+
+Passionate about frontend development, UI design, and creating beautiful responsive web applications.
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a star on GitHub.

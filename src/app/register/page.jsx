@@ -15,6 +15,7 @@ import {
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaEye } from "react-icons/fa";
+import { toast } from "sonner";
 
 export default function RegisterPage() {
   const router = useRouter();
@@ -35,23 +36,29 @@ export default function RegisterPage() {
       password,
     });
 
-    if (!error) {
-      router.push("/");
+    if (error) {
+      toast.error("Registration failed! You need to register properly.");
+      return;
     }
+
+    toast.success("Registration successful!");
+
+    setTimeout(() => {
+      router.push("/");
+    }, 1500);
   };
 
   return (
     <div className="min-h-screen bg-pink-100 flex items-center justify-center px-4 py-10">
-
       <Card className="w-full max-w-md sm:max-w-lg md:max-w-xl border shadow-xl rounded-2xl p-6 sm:p-8">
-
+        
         {/* Title */}
         <h1 className="text-center text-2xl sm:text-3xl font-bold mb-6">
           Register Your Account
         </h1>
 
         <Form className="flex flex-col gap-5 w-full" onSubmit={onSubmit}>
-
+          
           {/* Name */}
           <TextField isRequired name="name" type="text">
             <Label>Name</Label>
@@ -128,19 +135,20 @@ export default function RegisterPage() {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 pt-2">
-
             <Button type="submit" className="w-full sm:w-auto">
               <Check />
               Submit
             </Button>
 
-            <Button type="reset" variant="secondary" className="w-full sm:w-auto">
+            <Button
+              type="reset"
+              variant="secondary"
+              className="w-full sm:w-auto"
+            >
               Reset
             </Button>
-
           </div>
         </Form>
-
       </Card>
     </div>
   );
