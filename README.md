@@ -167,7 +167,3 @@ When users click on Details, they can:
 * Review and rating system
 
 ---
-
-## ⭐ Support
-
-If you like this project, consider giving it a star on GitHub.
