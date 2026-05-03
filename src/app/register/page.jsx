@@ -15,7 +15,8 @@ import {
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaEye } from "react-icons/fa";
-import { toast } from "sonner";
+import { toast } from "react-toastify";
+
 
 export default function RegisterPage() {
   const router = useRouter();
