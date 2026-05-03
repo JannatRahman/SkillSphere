@@ -11,8 +11,8 @@ const Profile = () => {
 
   return (
     <div className="bg-rose-100 min-h-screen py-8 px-4 sm:px-6 lg:px-8">
-      <h2 className='text-center text-4xl'>Welcome to SkillSphere</h2>
-      <p className='text-center pt-3 text-muted'>Manage your account status</p>
+      <h2 className='text-center text-4xl font-bold'>Welcome to SkillSphere</h2>
+      <p className='text-center pt-3 text-muted pb-6'>Manage your account status</p>
       <Card className="w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto flex flex-col items-center border rounded-2xl shadow-lg p-6 sm:p-8 animate__animated animate__pulse">
         
         {/* Avatar */}
