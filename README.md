@@ -57,36 +57,7 @@ The project is built with **Next.js**, **React**, **Tailwind CSS**, and **HeroUI
 * React Icons
 * Lottie React
 * Animate.css
-* Swiper.js
 * JavaScript (ES6+)
-
----
-
-## 📂 Project Structure
-
-```bash
-src/
- ├── app/
- │   ├── login/
- │   ├── register/
- │   ├── not-found.jsx
- │   └── page.jsx
- │
- ├── components/
- │   ├── Banner.jsx
- │   ├── InstructorSection.jsx
- │   ├── TrendingCourses.jsx
- │   ├── Footer.jsx
- │   └── LottieFiles.jsx
- │
- ├── assets/
- │   ├── images
- │   └── animations
- │
- └── data/
-     ├── courses.json
-     └── instructors.json
-```
 
 ---
 
@@ -94,7 +65,7 @@ src/
 
 ### 1. Clone the repository
 
-```bash
+```
 git clone https://github.com/JannatRahman/SkillSphere
 ```
 
@@ -194,14 +165,6 @@ When users click on Details, they can:
 * Instructor profile pages
 
 * Review and rating system
-
----
-
-## 👩‍💻 Author
-
-Developed by **Jannat Amila Rahman**
-
-Passionate about frontend development, UI design, and creating beautiful responsive web applications.
 
 ---
 
