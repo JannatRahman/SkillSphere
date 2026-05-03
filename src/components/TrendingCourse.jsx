@@ -24,8 +24,7 @@ const TrendingCourse = async () => {
             </h2>
 
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-sm sm:text-base">
-              Learn from highly skilled instructors who are passionate about
-              teaching and helping students grow their future.
+              Explore all our trending course. And choose your favorite one.
             </p>
           </div>
 
